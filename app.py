@@ -47,7 +47,7 @@ class LogParser():
     if app.config["DEBUG"]:
         STATS_DIR="sample"
     else:
-        STATS_DIR=""
+        STATS_DIR="/var/log/nginx"
 
     def __init__(self, stats):
         self.stats = stats
