@@ -122,7 +122,7 @@ class Stats():
         if "ajax" in line.url: return # don't count ajax requests
         if line.url in ["/hackaday", "/hackaday/"]: return # ignore requests to the parent
         assert line.url.startswith("/hackaday/")
-        url = line.url.removeprefix("/hackaday/")
+        url = line.url[len("/hackaday/"):]
         if "/" not in url:
             url = url + "/"
         project, url = url.split("/",1)
