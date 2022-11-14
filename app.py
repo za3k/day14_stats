@@ -79,7 +79,8 @@ class LogParser():
             for line in LogParser.read_log_file(x):
                 self.parse_line(line)
     def parse_line(self, line):
-        if m:= LogParser.LINEFORMAT.match(line):
+        m = LogParser.LINEFORMAT.match(line):
+        if m:
             self.stats.update(LogLine(m))
 
 BLACKLIST_IPS = {
