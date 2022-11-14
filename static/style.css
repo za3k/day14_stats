@@ -1,0 +1,42 @@
+/* -- This specific Hack-A-Day project -- */
+
+.stat {
+    border: 2px solid;
+    display: inline-block;
+}
+
+.stat.number {
+    display: block;
+}
+
+table.bar {
+    margin: 10px;
+    display: inline-block;
+}
+table tr:nth-child(even) {
+    background-color: lightyellow;
+}
+table td {
+    padding: 2px;
+}
+
+/* -- All Hack-A-Day projects -- */
+.about {
+    white-space: pre-wrap;
+}
+.footer {
+    background-color: rgba(0,0,0,0.2);
+    margin-top: 20px;
+}
+.footer ul {
+    list-style: none;
+    padding-left: 5px;
+}
+
+.navbar-brand-link a {
+    color: #777;
+}
+.navbar-brand-link a:hover {
+    color: #000;
+    text-decoration: none;
+}

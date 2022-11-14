@@ -1,0 +1,11 @@
+[Unit]
+Description=gunicorn3 for hackaday-14-stats
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/hackaday/day14_stats
+ExecStart=/bin/gunicorn3 -e SCRIPT_NAME=/hackaday/stats --bind 0.0.0.0:8014 app:app
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% from 'common.html' import bar,ips,number,table %}
+
+{% block header %}
+    <h1>{% block title %}{{ project_name }}{% endblock %}</h1>
+    {{ project_name }} is {{ description }}.
+{% endblock %}
+
+{% block content %}
+{{ number("Visits", stats.lines) }}
+{{ number("Projects", stats.days|length) }}
+{{ bar("Hits", stats.hits, stats.days) }}
+{{ bar("Unique IPs", stats.ip_counts, stats.days) }}
+{{ ips("Top visitors", stats.repeat, stats.days|length) }}
+{{ bar("Top referrer", stats.top_referrer, stats.days) }}
+{% endblock %}
