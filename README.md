@@ -2,7 +2,7 @@ Hack-A-Day is a project I'm doing in November, where I try to make 30 new projec
 
 # Day 14: Hack-A-Stats
 
-This is an interactive display of visitor stats for Hack-A-Day, written in d3.
+This is an interactive display of visitor stats for Hack-A-Day.
 
 ![Screenshot](screenshot.png)
 
