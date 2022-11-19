@@ -86,6 +86,9 @@ class LogParser():
 BLACKLIST_IPS = {
     "174.101.140.242", # me
 }
+BLACKLIST_PROJECTS = {
+    "caht"
+}
 DAYS = {
     "blog": 3,
     "chat": 4,
@@ -100,6 +103,10 @@ DAYS = {
     "tile": 11,
     "line": 13,
     "stats": 14,
+    "sound": 15,
+    "song": 16,
+    "tank": 17,
+    "crop": 18,
 }
 DAYS = defaultdict(int, DAYS)
 class Stats():
@@ -126,6 +133,8 @@ class Stats():
         if "/" not in url:
             url = url + "/"
         project, url = url.split("/",1)
+        if project not in self.days and project not in BLACKLIST_PROJECTS:
+            self.days[project] = 99
         self.lines += 1
         self.hits[project] += 1
         self.repeat[line.ip] += 1
