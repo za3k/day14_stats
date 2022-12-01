@@ -107,6 +107,17 @@ DAYS = {
     "song": 16,
     "tank": 17,
     "crop": 18,
+    "hang": 19,
+    "battle": 21,
+    "hell": 22,
+    "link2": 23,
+    "clock": 24,
+    "experiment": 25,
+    "mini": 26,
+    "snake": 27,
+    "farm": 27,
+    "adventure": 29,
+    "mmo": 30,
 }
 DAYS = defaultdict(int, DAYS)
 class Stats():
